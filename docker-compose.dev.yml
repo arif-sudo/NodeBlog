@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+ blog:
+  build:
+   context: .
+  ports:
+   - 3300:3300
+  environment:
+   - SERVER_PORT=3300
+   - DB_URL=mongodb://mongo:27017/blog
+  volumes:
+   - ./:/app
+   - /app/node_modules
+  command: node app.js
+
+ mongo:
+  image: mongo:4.2.8
+  ports:
+   - 27017:27017
+  volumes:
+   - mongodb:/data/db
+   - mongodb_config:/data/configdb
+volumes:
+ mongodb:
+ mongodb_config:

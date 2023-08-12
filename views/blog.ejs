@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%-include('./inc/header')%>
+    </head>
+<body>
+    <%-include('./inc/nav.ejs')%>
+    <section>
+        <h1><%=blog.title%></h1>         
+        <h3><%= blog.short %></h3>
+        <p><%=blog.long%></p>
+    </section>
+</body>
+</html>

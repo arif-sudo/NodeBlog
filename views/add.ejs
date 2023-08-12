@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%-include('./inc/header')%>
+    </head>
+<body>
+    <%-include('./inc/nav.ejs')%>
+    
+    <section>
+        <form action="/admin/add" method="post">
+            <input type="text" name="title" placeholder="Baslik" required>
+            <input type="text" name="short" placeholder="Aciklama" required>
+            <input type="text" name="long" placeholder="Icerik" required>
+            <input type="submit" value="kaydet">
+        </form>
+    </section>
+</body>
+</html>
